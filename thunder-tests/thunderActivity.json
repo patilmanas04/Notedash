@@ -1,0 +1,165 @@
+[
+    {
+        "_id": "fb720299-e836-47d3-8b58-60858fd9281a",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://localhost:3000/api/auth",
+        "url": "http://localhost:3000/api/auth",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2023-07-05T15:06:55.612Z",
+        "modified": "2023-07-05T15:29:49.023Z",
+        "headers": [
+            {
+                "name": "Content-Type",
+                "value": "application/json"
+            }
+        ],
+        "params": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n  \"name\": \"Manas\",\n  \"email\": \"manas@mail.com\",\n  \"password\": \"manasPassword\"\n}",
+            "form": []
+        },
+        "tests": []
+    },
+    {
+        "_id": "7e103a20-ecf2-49ff-a88b-13dc50161188",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://localhost:3000/api/auth/",
+        "url": "http://localhost:3000/api/auth/",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2023-07-05T15:07:16.468Z",
+        "modified": "2023-07-05T15:07:16.468Z",
+        "headers": [
+            {
+                "name": "Content-Type",
+                "value": "application/json"
+            }
+        ],
+        "params": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n  \"name\": \"Manas\",\n  \"email\": \"manas@mail.com\",\n  \"password\": \"manasPassword\"\n}",
+            "form": []
+        },
+        "tests": []
+    },
+    {
+        "_id": "22638cb1-3aab-48a8-80fe-676c11c4f6f4",
+        "colId": "history",
+        "containerId": "",
+        "name": "localhost:3000/api/auth",
+        "url": "localhost:3000/api/auth",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2023-07-05T15:15:33.707Z",
+        "modified": "2023-07-05T15:15:33.707Z",
+        "headers": [
+            {
+                "name": "Content-Type",
+                "value": "application/json"
+            }
+        ],
+        "params": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n  \"name\": \"Manas\"\n}",
+            "form": []
+        },
+        "tests": []
+    },
+    {
+        "_id": "5923724f-e288-412f-8ec5-ad2dacc95438",
+        "colId": "history",
+        "containerId": "",
+        "name": "localhost:3000",
+        "url": "localhost:3000",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2023-07-05T15:15:55.954Z",
+        "modified": "2023-07-05T15:15:55.954Z",
+        "headers": [
+            {
+                "name": "Content-Type",
+                "value": "application/json"
+            }
+        ],
+        "params": [],
+        "tests": []
+    },
+    {
+        "_id": "892665b1-2503-434f-844d-6bac73f071cd",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://localhost:3000/api/auth",
+        "url": "http://localhost:3000/api/auth",
+        "method": "POST",
+        "sortNum": 0,
+        "created": "2023-07-05T15:29:54.524Z",
+        "modified": "2023-07-05T18:02:21.117Z",
+        "headers": [
+            {
+                "name": "Content-Type",
+                "value": "application/json"
+            }
+        ],
+        "params": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n  \"name\": \"Rahul\",\n  \"email\": \"rahul@mail.com\",\n  \"password\": \"rahulPassword\"\n}",
+            "form": []
+        },
+        "tests": []
+    },
+    {
+        "_id": "72bbd275-699a-4ef9-a2f8-2bc6431d3ab9",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://localhost:3000/api/auth/createuser",
+        "url": "http://localhost:3000/api/auth/createuser",
+        "method": "POST",
+        "sortNum": 0,
+        "created": "2023-07-05T18:27:28.882Z",
+        "modified": "2023-07-05T18:27:28.882Z",
+        "headers": [
+            {
+                "name": "Content-Type",
+                "value": "application/json"
+            }
+        ],
+        "params": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n  \"name\": \"Rahul\",\n  \"email\": \"rahul@mail.com\",\n  \"password\": \"rahulPassword\"\n}",
+            "form": []
+        },
+        "tests": []
+    },
+    {
+        "_id": "5161af95-a20a-4587-bca5-7fd06e57af14",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://localhost:5000/api/auth/createuser",
+        "url": "http://localhost:5000/api/auth/createuser",
+        "method": "POST",
+        "sortNum": 0,
+        "created": "2023-07-05T18:28:18.682Z",
+        "modified": "2023-07-05T18:28:18.682Z",
+        "headers": [
+            {
+                "name": "Content-Type",
+                "value": "application/json"
+            }
+        ],
+        "params": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n  \"name\": \"Rahul\",\n  \"email\": \"rahul@mail.com\",\n  \"password\": \"rahulPassword\"\n}",
+            "form": []
+        },
+        "tests": []
+    }
+]

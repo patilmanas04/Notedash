@@ -1,0 +1,193 @@
+{
+    "_id": "57888b09-0c76-486c-8a63-2677b0f3018f",
+    "colName": "Notedash",
+    "created": "2023-07-05T18:30:14.975Z",
+    "sortNum": 10000,
+    "folders": [
+        {
+            "_id": "2786f416-cfc7-41a5-a43e-c3823752b20f",
+            "name": "Authentication",
+            "containerId": "",
+            "created": "2023-07-05T18:30:24.473Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "9ace8ea8-5699-4400-b641-98d26e8694d2",
+            "name": "Notes",
+            "containerId": "",
+            "created": "2023-07-07T15:38:38.128Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "6eea0bdf-1f16-4419-98ea-30535812c0e1",
+            "colId": "57888b09-0c76-486c-8a63-2677b0f3018f",
+            "containerId": "2786f416-cfc7-41a5-a43e-c3823752b20f",
+            "name": "Create a User",
+            "url": "localhost:5000/api/auth/signup",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-07-05T18:30:35.401Z",
+            "modified": "2023-07-06T16:35:57.594Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Manas\",\n  \"email\": \"manas@gmail.com\",\n  \"password\": \"manasPassword\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6028e4b9-77fc-4f30-8bea-6e243c3da78d",
+            "colId": "57888b09-0c76-486c-8a63-2677b0f3018f",
+            "containerId": "2786f416-cfc7-41a5-a43e-c3823752b20f",
+            "name": "User login with credentials",
+            "url": "localhost:5000/api/auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-07-06T16:34:35.899Z",
+            "modified": "2023-07-06T17:54:11.922Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"manas@gmail.com\",\n  \"password\": \"manasPassword\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1a3ad5f6-6ff3-499e-b140-e8beae20649d",
+            "colId": "57888b09-0c76-486c-8a63-2677b0f3018f",
+            "containerId": "2786f416-cfc7-41a5-a43e-c3823752b20f",
+            "name": "Get user details",
+            "url": "localhost:5000/api/auth/getuser",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-07-06T18:30:12.749Z",
+            "modified": "2023-07-07T18:51:20.439Z",
+            "headers": [
+                {
+                    "name": "Auth-Token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRhODVlOTNhOTU4NDhkNDEyYjE0ZWI5In0sImlhdCI6MTY4ODc1NTg1OX0.xCsSbUN4l6PjUlAb_IeidJRVDwCsD3_2BTu_iK4iDUI"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "27b17193-9163-4946-ae80-3e6adcd00b6b",
+            "colId": "57888b09-0c76-486c-8a63-2677b0f3018f",
+            "containerId": "9ace8ea8-5699-4400-b641-98d26e8694d2",
+            "name": "Fetching Notes associated to the user",
+            "url": "localhost:5000/api/notes/fetchnotes",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-07-07T15:39:19.703Z",
+            "modified": "2023-07-08T08:21:18.877Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Auth-Token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRhODVlOTNhOTU4NDhkNDEyYjE0ZWI5In0sImlhdCI6MTY4ODc1NTg5MX0.M94Inzo6zbuGTJz_pLrqVq6lpXh5He6Oc_W9iFMITOQ"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d2016240-eec6-4d67-aa1c-04363a750169",
+            "colId": "57888b09-0c76-486c-8a63-2677b0f3018f",
+            "containerId": "9ace8ea8-5699-4400-b641-98d26e8694d2",
+            "name": "Add Note",
+            "url": "localhost:5000/api/notes/addnote",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-07-07T16:04:33.855Z",
+            "modified": "2023-07-08T08:11:47.008Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Auth-Token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRhODVlOTNhOTU4NDhkNDEyYjE0ZWI5In0sImlhdCI6MTY4ODc1NTg5MX0.M94Inzo6zbuGTJz_pLrqVq6lpXh5He6Oc_W9iFMITOQ"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Note 5\",\n  \"description\": \"Note 5 description\",\n  \"tag\": \"testing\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2ba92fbd-29c4-48fc-bc62-74c5880941d5",
+            "colId": "57888b09-0c76-486c-8a63-2677b0f3018f",
+            "containerId": "9ace8ea8-5699-4400-b641-98d26e8694d2",
+            "name": "Update note",
+            "url": "localhost:5000/api/notes/updatenote/64a91a1fe601a3a520cf40e2",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2023-07-07T18:42:25.973Z",
+            "modified": "2023-07-08T08:12:39.320Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Auth-Token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRhODVlOTNhOTU4NDhkNDEyYjE0ZWI5In0sImlhdCI6MTY4ODc1NTg5MX0.M94Inzo6zbuGTJz_pLrqVq6lpXh5He6Oc_W9iFMITOQ"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Note 1 Updated\",\n  \"description\": \"Note 1 description updated\",\n  \"tag\": \"testing\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "74fd732c-ae1b-4e77-993d-e6c32de93d6e",
+            "colId": "57888b09-0c76-486c-8a63-2677b0f3018f",
+            "containerId": "9ace8ea8-5699-4400-b641-98d26e8694d2",
+            "name": "Delete note",
+            "url": "localhost:5000/api/notes/deletenote/64a91a1fe601a3a520cf40e2",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2023-07-08T08:08:10.821Z",
+            "modified": "2023-07-08T08:13:23.025Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Auth-Token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRhODVlOTNhOTU4NDhkNDEyYjE0ZWI5In0sImlhdCI6MTY4ODc1NTg5MX0.M94Inzo6zbuGTJz_pLrqVq6lpXh5He6Oc_W9iFMITOQ"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
