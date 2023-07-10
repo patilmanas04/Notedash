@@ -5,9 +5,10 @@ import AddNote from "./AddNote";
 const Home = ()=>{
     return (
         <>
-        <AddNote/>
-
-        <Notes/>
+        <div className="container my-3">
+            <AddNote/>
+            <Notes/>
+        </div>
         </>
     )
 }

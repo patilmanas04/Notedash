@@ -6,17 +6,23 @@ const Notes = ()=>{
     const context = useContext(NoteContext)
     const {notes, fetchNotes, editNote} = context
 
-    const [newNote, setNewNote] = useState({edittitle: "", editdescription: "", edittag: ""})
+    const [newNote, setNewNote] = useState({id: "", edittitle: "", editdescription: "", edittag: ""})
 
     useEffect(() => {
         fetchNotes()
     }, [])
 
     const ref = useRef(null)
+    const refClose = useRef(null)
 
     const handleEditClick = (note)=>{
         ref.current.click()
-        setNewNote({edittitle: note.title, editdescription: note.description, edittag: note.tag})
+        setNewNote({id: note._id, edittitle: note.title, editdescription: note.description, edittag: note.tag})
+    }
+
+    const handleSaveChangesClick = ()=>{
+        editNote(newNote.id, newNote.edittitle, newNote.editdescription, newNote.edittag)
+        refClose.current.click()
     }
 
     const onChange = (e)=>{
@@ -29,7 +35,7 @@ const Notes = ()=>{
                 Launch demo modal
             </button>
 
-            <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
@@ -51,15 +57,15 @@ const Notes = ()=>{
                             </form>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary">Save changes</button>
+                            <button type="button" ref={refClose} className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-primary" onClick={handleSaveChangesClick} disabled={newNote.edittitle.length===0 || newNote.editdescription.length===0}>Save changes</button>
                         </div>
                     </div>
                 </div>
             </div>
 
         <div className="row my-5">
-            <h2>Your Notes</h2>
+        <h2 style={{paddingLeft: "0"}}>Your Notes</h2>
             {
                 notes.map((note, index) => {
                     return <NoteItem key={index} note={note} handleEditClick={handleEditClick}/>

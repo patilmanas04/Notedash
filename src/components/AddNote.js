@@ -23,23 +23,21 @@ const AddNote = () => {
 
     return (
         <>
-        <div className="container my-3">
-            <h2>Add note here</h2>
-            <form>
-                <div className="mb-3">
-                    <label htmlFor="title" className="form-label">Title</label>
+        <h2>Add note here</h2>
+        <form>
+            <div className="mb-3">
+                <label htmlFor="title" className="form-label">Title</label>
 
-                    <input type="text" className="form-control" name="title" id="title" onChange={onChange}/>
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="description" className="form-label">Description</label>
+                <input type="text" className="form-control" name="title" id="title" onChange={onChange}/>
+            </div>
+            <div className="mb-3">
+                <label htmlFor="description" className="form-label">Description</label>
 
-                    <input type="text" className="form-control" id="description" name="description" onChange={onChange}/>
-                </div>
+                <input type="text" className="form-control" id="description" name="description" onChange={onChange}/>
+            </div>
 
-                <button type="submit" className="btn btn-primary" onClick={handleClick}>Add Note</button>
-            </form>
-        </div>
+            <button type="submit" disabled={note.title.length===0 || note.description.length===0} className="btn btn-primary" onClick={handleClick}>Add Note</button>
+        </form>
         </>
     )
 }
