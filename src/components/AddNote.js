@@ -11,13 +11,15 @@ const AddNote = () => {
         tag: "general"
     })
 
+    // handle click on add note button
     const handleClick = (e)=>{
         e.preventDefault()
         addNote(note.title, note.description, note.tag)
     }
 
     const onChange = (e)=>{
-        // ...note says that the object should be there as it was and the second parameter says that only update the values which are changing with the new values from the form
+        // ...note means the object will be there as it was before and the after comma means [e.target.name]: e.target.value means that only the values with the particular key-value pair will change and this will not affect other part of the object
+        // ... is known as a spread operator
         setNote({...note, [e.target.name]: e.target.value})
     }
 

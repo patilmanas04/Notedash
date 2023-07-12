@@ -16,6 +16,7 @@ import Alert from './components/Alert';
 const App = ()=>{
 	const [alert, setAlert] = useState(false);
 
+	// function to show alert which takes two parameters --> alert message and alert type
 	const showAlert = (message, type)=>{
         setAlert({
             message: message,
@@ -27,6 +28,7 @@ const App = ()=>{
 		}, 5000)
     }
 
+	// automatically closes the alert in 5 seconds
 	const closeAlert = ()=>{
         setAlert(false);
     }

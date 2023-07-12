@@ -4,6 +4,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 const Navbar = ()=>{
     const navigate = useNavigate()
     
+    // handle click on logout button
     const handleLogout = ()=>{
         localStorage.removeItem("authToken")
         navigate("/login")

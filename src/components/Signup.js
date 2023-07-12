@@ -8,6 +8,7 @@ const Signup = (props) => {
 
     const [credentials, setCredentials] = useState({name: "", email: "", password: "", confirmPassword: ""})
 
+    // handle form submit to create a new account for the user
     const handleFormSubmit = async(e)=>{
         e.preventDefault()
         const {name, email, password} = credentials
@@ -23,6 +24,7 @@ const Signup = (props) => {
         const json = await response.json()
         console.log(json)
 
+        // showing alert messages if the signup was successfull or not
         if(json.success){
             localStorage.setItem("authToken", json.authToken)
             navigate("/")
@@ -33,6 +35,7 @@ const Signup = (props) => {
         }
     }
 
+    // updating the credentials as the user alters the values of the form
     const onChange = (e)=>{
         setCredentials({...credentials, [e.target.name]: e.target.value})
     }

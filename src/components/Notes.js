@@ -11,6 +11,7 @@ const Notes = ()=>{
 
     const [newNote, setNewNote] = useState({id: "", edittitle: "", editdescription: "", edittag: ""})
 
+    // useEffect to find if the user is logged in or not if the user is logged in then it will shows user's saved notes and if the user is not logged in then the user will be redirected to the "/login" route which is the login page
     useEffect(() => {
         if(localStorage.getItem("authToken")){
             fetchNotes()
@@ -23,16 +24,19 @@ const Notes = ()=>{
     const ref = useRef(null)
     const refClose = useRef(null)
 
+    // handle click on edit button
     const handleEditClick = (note)=>{
         ref.current.click()
         setNewNote({id: note._id, edittitle: note.title, editdescription: note.description, edittag: note.tag})
     }
 
+    // handle click on save changes button
     const handleSaveChangesClick = ()=>{
         editNote(newNote.id, newNote.edittitle, newNote.editdescription, newNote.edittag)
         refClose.current.click()
     }
 
+    // update the newNote with values written in the update note box
     const onChange = (e)=>{
         setNewNote({...newNote, [e.target.name]: e.target.value})
     }

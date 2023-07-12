@@ -8,6 +8,7 @@ const Login = (props) => {
 
     const [credentials, setCredentials] = useState({email: "", password: ""})
 
+    // handle form submit to log into the user's account
     const handleFormSubmit = async(e)=>{
         e.preventDefault()
         const url = "http://localhost:5000/api/auth/login"
@@ -22,6 +23,7 @@ const Login = (props) => {
         const json = await response.json()
         console.log(json)
 
+        // showing alert messages if the login was successfull or not
         if(json.success){
             localStorage.setItem("authToken", json.authToken)
             navigate("/")
@@ -32,6 +34,7 @@ const Login = (props) => {
         }
     }
 
+    // update the credentials as the user alters the values of the form
     const onChange = (e)=>{
         setCredentials({...credentials, [e.target.name]: e.target.value})
     }

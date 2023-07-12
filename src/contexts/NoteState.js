@@ -50,6 +50,7 @@ const NoteState = (props)=>{
 
         const newNotesArray = JSON.parse(JSON.stringify(notes))
         console.log(newNotesArray)
+        
         // To show the changes in the frontend
         for(let i=0 ; i<newNotesArray.length ; i++){
             if(noteId===newNotesArray[i]._id){
