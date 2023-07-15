@@ -5,6 +5,7 @@ const NoteState = (props)=>{
     const host = "http://localhost:5000"
     const authToken = localStorage.getItem("authToken")
     const [notes, setNotes] = useState([])
+    const [userCredentials, setUserCredentials] = useState({_id:"", name:"", email:"", date:"", __v:""})
 
     // Add note
     const addNote = async(title, description, tag)=>{
@@ -81,8 +82,38 @@ const NoteState = (props)=>{
         setNotes(updatednotes)
     }
 
+    // Get user details to show in the profile page
+    const getUserDetails = async()=>{
+        const url = `${host}/api/auth/getuser`
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Auth-Token": authToken
+            }
+        })
+
+        const json = await response.json()
+        setUserCredentials(json)
+    }
+
+    const setUserDetails = async(name)=>{
+        const url = `${host}/api/auth/setuser`
+        const response = await fetch(url, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                "Auth-Token": authToken
+            },
+            body: JSON.stringify({name})
+        })
+
+        const json = await response.json()
+        setUserCredentials(json)
+    }
+
     return (
-        <NoteContext.Provider value={{notes, addNote, deleteNote, fetchNotes, editNote}}>
+        <NoteContext.Provider value={{notes, addNote, deleteNote, fetchNotes, editNote, getUserDetails, userCredentials, setUserCredentials, setUserDetails}}>
             {props.children}
         </NoteContext.Provider>
     )

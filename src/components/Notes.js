@@ -19,6 +19,7 @@ const Notes = ()=>{
         else{
             navigate("/login")
         }
+        // eslint-disable-next-line
     }, [])
 
     const ref = useRef(null)
@@ -79,9 +80,9 @@ const Notes = ()=>{
         <div className="row my-5">
         <h2 style={{paddingLeft: "0"}}>Your Notes</h2>
             {
-                notes.map((note, index) => {
+                notes.length!==0?notes.map((note, index) => {
                     return <NoteItem key={index} note={note} handleEditClick={handleEditClick}/>
-                })
+                }) : <p style={{paddingLeft: "3px"}}>Nothing to see here, start capturing your thoughts!</p>
             }
         </div>
         </>

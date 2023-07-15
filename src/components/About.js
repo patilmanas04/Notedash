@@ -4,7 +4,7 @@ const About = ()=>{
     // TODO: Frontend for about page
     return (
         <>
-        <h1>This is About page</h1>
+        <h1>TODO</h1>
         </>
     )
 }

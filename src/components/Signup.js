@@ -42,28 +42,32 @@ const Signup = (props) => {
 
     return (
         <>
-        <div className="container my-3">
-            <h2>Signup</h2>
-            <form className='my-3' onSubmit={handleFormSubmit}>
-                <div className="mb-3">
-                    <label htmlFor="name" className="form-label">Name</label>
-                    <input type="text" className="form-control" value={credentials.name} id="name" name='name' onChange={onChange}  required/>
+        <div className="container my-5">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Signup</h2>
+                    <form className='my-3' onSubmit={handleFormSubmit}>
+                        <div className="mb-3">
+                            <label htmlFor="name" className="form-label">Name</label>
+                            <input type="text" className="form-control" value={credentials.name} id="name" name='name' onChange={onChange} required />
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="email" className="form-label">Email address</label>
+                            <input type="email" className="form-control" value={credentials.email} id="email" name='email' aria-describedby="emailHelp" onChange={onChange} required />
+                            <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="password" className="form-label">Password</label>
+                            <input type="password" className="form-control" value={credentials.password} id="password" name='password' onChange={onChange} required minLength={8} />
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
+                            <input type="password" className="form-control" value={credentials.confirmPassword} id="confirmPassword" name='confirmPassword' onChange={onChange} required minLength={8} />
+                        </div>
+                        <button type="submit" className="btn btn-primary">Sign in</button>
+                    </form>
                 </div>
-                <div className="mb-3">
-                    <label htmlFor="email" className="form-label">Email address</label>
-                    <input type="email" className="form-control" value={credentials.email} id="email" name='email' aria-describedby="emailHelp" onChange={onChange} required/>
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="password" className="form-label">Password</label>
-                    <input type="password" className="form-control" value={credentials.password} id="password" name='password' onChange={onChange} required minLength={8}/>
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
-                    <input type="password" className="form-control" value={credentials.confirmPassword} id="confirmPassword" name='confirmPassword' onChange={onChange} required minLength={8}/>
-                </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
-            </form>
+            </div>
         </div>
         </>
     )
