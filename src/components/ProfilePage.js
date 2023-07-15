@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import NoteContext from "../contexts/noteContext";
 
 const ProfilePage = ()=>{
@@ -7,6 +7,7 @@ const ProfilePage = ()=>{
 
     useEffect(() => {
         getUserDetails()
+        // eslint-disable-next-line
     }, [])
 
     const onChange = (e)=>{

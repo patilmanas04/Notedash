@@ -40,7 +40,7 @@ const App = ()=>{
 			<Router>
 				<Navbar />
 				<Alert alert={alert} closeAlert={closeAlert}/>
-				<div className="container">
+				<div className="container" style={{marginTop: "5.5rem"}}>
 				<Routes>
 					<Route exact path="/" element={<Home />}></Route>
 					<Route exact path="/about" element={<About />}></Route>
